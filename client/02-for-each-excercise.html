@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <div id="app"></div>
+      <script>
+         const task = [
+            { category: 'Home', name: 'Lavar la ropa', done: 'yes' },
+            { category: 'Job', name: 'Reunión con cliente', done: 'yes' },
+            { category: 'Church', name: 'Servir en audiovisuales', done: 'no' },
+            { category: 'Home', name: 'Limpiar la cocina', done: 'yes' },
+            { category: 'Job', name: 'Despliegue', done: 'no' },
+            { category: 'Church', name: 'Reunión lideres', done: 'yes' },
+            { category: 'Home', name: 'Bañas las mascotas', done: 'yes' },
+            { category: 'Job', name: 'Migración cliente', done: 'no' },
+         ];
+
+         const app = document.getElementById('app');
+         task.forEach((taskItem) => {
+            app.innerHTML += `<li><input type='checkbox' ${
+               taskItem.done === 'yes' && 'checked'
+            }>${taskItem.category} -- ${taskItem.name}</li>`;
+         });
+      </script>
+   </body>
+</html>
